@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'statement5';
+  locations!: string[];
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.locations = [...locations];
+  }
 }
+
+
+const locations: string[] = [
+  'Lombard St, San Francisco, CA, USA',
+  'PIER 39, The Embarcadero, San Francisco, CA, USA',
+  'Golden Gate Bridge, San Francisco, CA, USA',
+  `Fisherman's Wharf, San Francisco, CA, USA`,
+  'Alcatraz Island, San Francisco, CA, USA'
+];
